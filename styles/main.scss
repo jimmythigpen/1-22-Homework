@@ -1,0 +1,17 @@
+@import 'bourbon/bourbon';
+$visual-grid: true;
+@import 'neat/neat';
+
+body {
+  background-color: #f6f6f6;
+
+}
+.container {
+  @include outer-container (1200px);
+
+}
+span {
+  @include span-columns (4);
+  @include omega(3n);
+  /*   text-align: center; */
+}

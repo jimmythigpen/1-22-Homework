@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Charleston</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <div class="container">
+
+
+    <div class="results-list">
+    </div>
+
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+
+    <script type="text/template" data-template-name="results-item">
+      <span>
+        <% title %>
+          <% cost %>
+            <% shop %>
+              <img src="<% image %>" />
+      </span>
+    </script>
+
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </div>
+  </div>
+</body>
+
+</html>
