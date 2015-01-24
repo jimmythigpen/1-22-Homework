@@ -1,17 +1,82 @@
 @import 'bourbon/bourbon';
-$visual-grid: true;
+/* \$visual-grid: true; */
+$gutter: em(48px);
+/* \$visual-grid-color: #b2b2b2 !global; */
 @import 'neat/neat';
 
 body {
-  background-color: #f6f6f6;
+  background-color: #f5f5f1;
+  font-family: Arial;
+  margin: 0;
 
 }
-.container {
-  @include outer-container (1200px);
+header {
+
+  width: 100%;
+  background-color: #fff;
+  height: 80px;
+  margin-bottom: 50px;
 
 }
-span {
-  @include span-columns (4);
+header span {
+  color: #d4562a;
+  position: absolute;
+  top: 10px;
+  left: 116px;
+  font-size: 50px;
+
+}
+.results-list {
+  @include outer-container(730px);
+
+}
+.listing {
+  @include span-columns(4);
   @include omega(3n);
-  /*   text-align: center; */
+  height: 220px;
+  width: 224px;
+  margin-bottom: 18px;
+  background: #fff;
+  position: relative;
+  border-radius: 3px;
+  padding: 4px;
+  text-align: center;
+
+}
+p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 7px;
+
+}
+.image img {
+  width: 100%;
+
+}
+.cost {
+  position: absolute;
+  right: 9px;
+  color: #74bf40;
+  font-size: 12px;
+}
+.shop {
+  color: #b2b2b2;
+  position: absolute;
+  left: 10%;
+  font-size: 12px;
+}
+.dropdown {
+  position: absolute;
+  right: 10%;
+  top: 29px;
+
+}
+@media screen and (max-width: 725px) {
+  .listing {
+    @include span-columns(12);
+    /* @include omega(2n); */
+  }
 }
