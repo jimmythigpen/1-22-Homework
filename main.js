@@ -17,18 +17,17 @@
     //
 
     $(".dropdown").change(function(sortStuff) {
-      if ($(".dropdown option:selected").text() == "Highest Price") {
+      if ($(".dropdown option:selected").text() == "Lowest Price") {
         results = _.sortBy(results, "price");
-      } else if ($(".dropdown option:selected").text() == "Lowest Price") {
+      } else if ($(".dropdown option:selected").text() == "Highest Price") {
         results = _.sortBy(results, "price").reverse();
       }
       renderListings(results);
     });
 
     function renderListings(data) {
-      $('.results-list').innerHTML = '';
+      $list.empty();
       data.forEach(function(result) {
-
         var resultText = renderTemplate('results-item', {
           title: result.title,
           cost: result.price,
@@ -36,10 +35,8 @@
           image: result.Images[1].url_170x135,
           currency: result.Shop.currency_code
         });
-
         $list.append(resultText);
       });
-
     }
 
     //
