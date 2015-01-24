@@ -26,30 +26,21 @@
     });
 
     function renderListings(data) {
-      $('.results-item').innerHTML = ''; //This part just empties your listings so you're not repeating them.
-      data.forEach(function(item) {
-        renderTemplate(item);
+      $('.results-list').innerHTML = '';
+      data.forEach(function(result) {
+
+        var resultText = renderTemplate('results-item', {
+          title: result.title,
+          cost: result.price,
+          shop: result.Shop.shop_name,
+          image: result.Images[1].url_170x135,
+          currency: result.Shop.currency_code
+        });
+
+        $list.append(resultText);
       });
+
     }
-
-
-
-    // var results = (sortByName(results));
-
-
-    // var dropDown = function(selected) {
-    //   return sortByName(results);
-    // };
-
-    // function dropDownSort() {
-    //   var selected = $(".dropdown option:selected").text();
-    //   if (selected == "Lowest Price") {
-    //     console.log("Hello!");
-    //   }
-    // }
-
-    // var selected =
-
 
     //
     // Relevance View
