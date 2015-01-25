@@ -6,7 +6,7 @@
   $(document).ready(function() {
 
     //
-    //links html element div with .results-list class to
+    // links html element div with .results-list class
     //
     var $list = $('.results-list');
 
@@ -33,6 +33,7 @@
           cost: result.price,
           shop: result.Shop.shop_name,
           image: result.Images[1].url_170x135,
+          url: result.url,
           currency: result.Shop.currency_code
         });
         $list.append(resultText);
@@ -40,7 +41,7 @@
     }
 
     //
-    // Relevance View
+    // Default / Relevance View
     //
 
     results.forEach(function(result) {
@@ -49,6 +50,7 @@
         cost: result.price,
         shop: result.Shop.shop_name,
         image: result.Images[1].url_170x135,
+        url: result.url,
         currency: result.Shop.currency_code
       });
       $list.append(resultText);
@@ -63,10 +65,5 @@
     });
     return $template;
   }
-
-
-
-
-
 
 })();
