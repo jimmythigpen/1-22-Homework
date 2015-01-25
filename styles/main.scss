@@ -22,9 +22,8 @@ header span {
   color: #d4562a;
   position: absolute;
   top: 10px;
-  left: 116px;
+  left: 10%;
   font-size: 50px;
-
 }
 .results-list {
   @include outer-container(730px);
@@ -40,7 +39,6 @@ header span {
   position: relative;
   border-radius: 3px;
   padding: 4px;
-  text-align: center;
 
 }
 p {
@@ -50,11 +48,12 @@ p {
   font-size: 12px;
   color: #666;
   margin: 0 0 7px;
+  transition: transform 0.5s;
 
 }
 .image img {
   width: 100%;
-
+  transition: all 0.5s;
 }
 .cost {
   position: absolute;
@@ -65,7 +64,7 @@ p {
 .shop {
   color: #b2b2b2;
   position: absolute;
-  left: 10%;
+  left: 4%;
   font-size: 12px;
 }
 .dropdown {
@@ -77,6 +76,18 @@ p {
 @media screen and (max-width: 725px) {
   .listing {
     @include span-columns(12);
-    /* @include omega(2n); */
+  }
+  .results-list {
+    max-width: 224px;
+  }
+
+}
+.listing:hover {
+  p {
+    transform: translate(0px, 6px);
+  }
+  .image img {
+    border-radius: 4px;
+    transform: scale3d(1.1, 1.1, 1);
   }
 }

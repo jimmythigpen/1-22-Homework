@@ -10,8 +10,6 @@
     //
     var $list = $('.results-list');
 
-
-
     //
     // Sorted by price
     //
@@ -21,6 +19,8 @@
         results = _.sortBy(results, "price");
       } else if ($(".dropdown option:selected").text() == "Highest Price") {
         results = _.sortBy(results, "price").reverse();
+      } else if ($(".dropdown option:selected").text() == "Relevance") {
+        results = rawCharlestonData.results;
       }
       renderListings(results);
     });
@@ -56,8 +56,6 @@
 
   });
 
-
-
   function renderTemplate(name, data) {
     var $template = $('[data-template-name=' + name + ']').text();
     $.each(data, function(prop, value) {
@@ -65,6 +63,10 @@
     });
     return $template;
   }
+
+
+
+
 
 
 })();
