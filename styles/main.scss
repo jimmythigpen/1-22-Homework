@@ -1,109 +1,114 @@
 @import 'bourbon/bourbon';
-/* \$visual-grid: true; */
 $gutter: em(48px);
-/* \$visual-grid-color: #b2b2b2 !global; */
 @import 'neat/neat';
 
 body {
+  margin: 0;
   background-color: #f5f5f1;
   font-family: Arial;
-  margin: 0;
-
 }
+
 header {
-
-  width: 100%;
-  background-color: #fff;
-  height: 80px;
-  margin-bottom: 50px;
   position: relative;
+  margin-bottom: 50px;
+  background-color: #fff;
+  width: 100%;
+  height: 80px;
 
+  span {
+
+    position: absolute;
+    top: 10px;
+    left: 10%;
+    color: #d4562a;
+    font-size: 50px;
+  }
 }
-header span {
-  color: #d4562a;
-  position: absolute;
-  top: 10px;
-  left: 10%;
-  font-size: 50px;
-}
+
 .results-list {
   @include outer-container(730px);
 
 }
+
 .listing {
   @include span-columns(4);
   @include omega(3n);
-  height: 220px;
-  width: 224px;
-  margin-bottom: 18px;
-  background: #fff;
   position: relative;
+  margin-bottom: 18px;
   border-radius: 3px;
+  background: #fff;
   padding: 4px;
-
+  width: 224px;
+  height: 220px;
 }
+
 p {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-size: 12px;
-  color: #666;
+  transition: transform .5s;
   margin: 0 0 7px;
-  transition: transform 0.5s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #666;
+  font-size: 12px;
+}
 
-}
 .image img {
+  transition: all .5s;
   width: 100%;
-  transition: all 0.5s;
 }
+
 .cost {
   position: absolute;
   right: 9px;
   color: #74bf40;
   font-size: 12px;
 }
+
 .shop {
-  color: #b2b2b2;
   position: absolute;
   left: 4%;
+  color: #b2b2b2;
   font-size: 12px;
 }
+
 .dropdown {
   position: absolute;
-  right: 10%;
   top: 29px;
-
+  right: 10%;
 }
+
 input {
   position: absolute;
-  left: 20%;
   top: 24%;
-  padding: 10px;
-  border-radius: 3px;
+  left: 20%;
   border: 1px solid #b0b0b0;
+  border-radius: 3px;
+  padding: 10px;
   font-size: 12px;
 
   &:focus {
     outline: none;
     border: 1px solid #63b5cf;
   }
-
 }
+
 @media screen and (max-width: 725px) {
   .listing {
     @include span-columns(12);
   }
+
   .results-list {
     max-width: 224px;
   }
-
 }
+
 .listing:hover {
   p {
-    transform: translate(0px, 6px);
+    transform: translate(0, 6px);
   }
+
   .image img {
-    border-radius: 4px;
     transform: scale3d(1.1, 1.1, 1);
+    border-radius: 4px;
   }
 }

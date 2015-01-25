@@ -1,5 +1,3 @@
-/* \$visual-grid: true; */
-/* \$visual-grid-color: #b2b2b2 !global; */
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -11,23 +9,22 @@ html {
   box-sizing: inherit; }
 
 body {
+  margin: 0;
   background-color: #f5f5f1;
-  font-family: Arial;
-  margin: 0; }
+  font-family: Arial; }
 
 header {
-  width: 100%;
-  background-color: #fff;
-  height: 80px;
+  position: relative;
   margin-bottom: 50px;
-  position: relative; }
-
-header span {
-  color: #d4562a;
-  position: absolute;
-  top: 10px;
-  left: 10%;
-  font-size: 50px; }
+  background-color: #fff;
+  width: 100%;
+  height: 80px; }
+  header span {
+    position: absolute;
+    top: 10px;
+    left: 10%;
+    color: #d4562a;
+    font-size: 50px; }
 
 .results-list {
   max-width: 730px;
@@ -43,13 +40,13 @@ header span {
   display: block;
   margin-right: 3.57869%;
   width: 30.94754%;
-  height: 220px;
-  width: 224px;
-  margin-bottom: 18px;
-  background: #fff;
   position: relative;
+  margin-bottom: 18px;
   border-radius: 3px;
-  padding: 4px; }
+  background: #fff;
+  padding: 4px;
+  width: 224px;
+  height: 220px; }
   .listing:last-child {
     margin-right: 0; }
   .listing:nth-child(3n) {
@@ -58,17 +55,17 @@ header span {
     clear: left; }
 
 p {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-size: 12px;
-  color: #666;
+  transition: transform .5s;
   margin: 0 0 7px;
-  transition: transform 0.5s; }
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #666;
+  font-size: 12px; }
 
 .image img {
-  width: 100%;
-  transition: all 0.5s; }
+  transition: all .5s;
+  width: 100%; }
 
 .cost {
   position: absolute;
@@ -77,23 +74,23 @@ p {
   font-size: 12px; }
 
 .shop {
-  color: #b2b2b2;
   position: absolute;
   left: 4%;
+  color: #b2b2b2;
   font-size: 12px; }
 
 .dropdown {
   position: absolute;
-  right: 10%;
-  top: 29px; }
+  top: 29px;
+  right: 10%; }
 
 input {
   position: absolute;
-  left: 20%;
   top: 24%;
-  padding: 10px;
-  border-radius: 3px;
+  left: 20%;
   border: 1px solid #b0b0b0;
+  border-radius: 3px;
+  padding: 10px;
   font-size: 12px; }
   input:focus {
     outline: none;
@@ -111,9 +108,9 @@ input {
   .results-list {
     max-width: 224px; } }
 .listing:hover p {
-  transform: translate(0px, 6px); }
+  transform: translate(0, 6px); }
 .listing:hover .image img {
-  border-radius: 4px;
-  transform: scale3d(1.1, 1.1, 1); }
+  transform: scale3d(1.1, 1.1, 1);
+  border-radius: 4px; }
 
 /*# sourceMappingURL=main.css.map */
