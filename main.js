@@ -16,9 +16,13 @@
 
     $(".dropdown").change(function(sortStuff) {
       if ($(".dropdown option:selected").text() == "Lowest Price") {
-        results = _.sortBy(results, "price");
+        results = _.sortBy(results, function(item) {
+          return +item.price
+        });
       } else if ($(".dropdown option:selected").text() == "Highest Price") {
-        results = _.sortBy(results, "price").reverse();
+        results = _.sortBy(results, function(item) {
+          return +item.price;
+        }).reverse();
       } else if ($(".dropdown option:selected").text() == "Relevance") {
         results = rawCharlestonData.results;
       }
